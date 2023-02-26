@@ -16,6 +16,7 @@ const questions = [
 ];
 let score = 0;
 let currentQuestion = 0;
+let answered = false;
 
 function showQuestion(question) {
     document.getElementById("question").innerText = question.text;
@@ -27,6 +28,9 @@ function showQuestion(question) {
 }
 
 function buttonClickedEventListener(event) {
+    if (answered) {
+        return;
+    }
     const buttonId = event.target.id;
     const currentAnswer = questions[currentQuestion].answer;
     if (buttonId === currentAnswer) {
@@ -37,9 +41,9 @@ function buttonClickedEventListener(event) {
         document.getElementById("answer").innerText = "Wrong";
         document.getElementById("score").innerText = score;
     }
-    console.log("Next Question TO");
+    answered = true;
     setTimeout(() => {
-        console.log("Next Question");
+        answered = false;
         if (currentQuestion + 1 < questions.length) {
             currentQuestion++;
             showQuestion(questions[currentQuestion]);
