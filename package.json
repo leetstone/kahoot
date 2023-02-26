@@ -1,0 +1,33 @@
+{
+  "name": "kahoot",
+  "version": "1.0.0",
+  "description": "A Kahoot Clone using vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leetstone/kahoot.git"
+  },
+  "keywords": [
+    "Kahoot",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Game",
+    "Learning"
+  ],
+  "author": "Owen Lidstone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leetstone/kahoot/issues"
+  },
+  "homepage": "https://github.com/leetstone/kahoot#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
